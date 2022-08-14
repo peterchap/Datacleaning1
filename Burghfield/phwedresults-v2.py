@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 
 file1 = "py80lookup-GL2022.xlsx"
-file2 = "Burghfield Wednesday Evening Personal Handicap 29-06-22.xlsx"
-file3 = "Wednesday Results R12 290622.xlsx"
+file2 = "Burghfield Wednesday Evening Personal Handicap 03-08-22.xlsx"
+file3 = "Wednesday Results R17 030822.xlsx"
 
-directory = "C:/Users/PeterChaplin/OneDrive - esbconnect/Burghfield/"
+directory = "C:/Users/PeterChaplin_fkt3wwy/OneDrive - Datazag Ltd/Documents/Burghfield/"
 
-date = "06-07-22"
+date = "10-08-22"
 
 # import data
 
@@ -24,10 +24,10 @@ df3 = pd.read_excel(
 )
 print(df3.shape)
 print(df3.columns),
-#df4 = df3.merge(df2, on=["Name", "Boat", "Sail"], how="outer")
+df4 = df3.merge(df2, on=["Name", "Class", "Sail"], how="outer")
 df4 = df3.merge(df1, left_on="Class", right_on="Class", how="left")
 df4["Result"] = df4["Result"].apply(pd.to_numeric, errors="coerce")
-#df4["Result"] = df4["Result"].fillna(0)
+df4["Result"] = df4["Result"].fillna(0)
 #df4["Personal Handicap"] = 0
 
 print(df4.shape)
@@ -75,7 +75,6 @@ df6['Personal Start Time'] = df6['Start'] + df6['Personal Handicap']
 df6.sort_values(by=["Personal Start Time"], ascending=True, inplace=True)
 final = df6[['Name', 'Class', 'Sail', 'PY Handicap', 'Start', 'Personal Handicap',
              'Personal Start Time']]
-final.to_excel(
-    directory + "Burghfield Wednesday Evening Personal Handicap " + date + ".xlsx",
-    index=False,
-)
+final.to_excel(directory + "Burghfield Wednesday Evening Personal Handicap " +
+               date + ".xlsx", index=False,)
+# "C:\Users\PeterChaplin_fkt3wwy\OneDrive - Datazag Ltd\Documents\Burghfield"
