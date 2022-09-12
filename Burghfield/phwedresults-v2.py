@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 
 file1 = "py80lookup-GL2022.xlsx"
-file2 = "Burghfield Wednesday Evening Personal Handicap 10-08-22.xlsx"
-file3 = "Wednesday Results R18 100822.xlsx"
+file2 = "Burghfield Wednesday Evening Personal Handicap 17-08-22.xlsx"
+file3 = "Wednesday Results R19 170822.xlsx"
 
 directory = "C:/Users/PeterChaplin_fkt3wwy/OneDrive - Datazag Ltd/Documents/Burghfield/"
 
-date = "17-08-22"
+date = "24-08-22"
 
 # import data
 
