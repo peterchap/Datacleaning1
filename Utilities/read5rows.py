@@ -6,12 +6,12 @@ import numpy as np
 
 # directory = 'E:/Cleaning-todo/'
 
-filename = "2021-09-24-1632441867-fdns_mx.json"
-directory = "C:/Users/Peter/Downloads/"
+directory = "C:/Users/PeterChaplin/Downloads/"
+file="dnstxt_records_full.txt"
 
 N = 200
-with open(directory + filename, mode="r") as file1, open(
-    directory + "jmxtest.json", mode="a"
+with open(directory + file, mode="r") as file1, open(
+    directory + "domtxt.csv", mode="a"
 ) as file2:
     for i in range(0, N):
         a = file1.readline()

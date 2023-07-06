@@ -2,7 +2,7 @@
 import gzip
 
 directory = "E:/rapid7/"
-file = "domain_all_refresh3.csv"
+file = "rapid7_refresh5.csv"
 
 
 with open(directory + file, 'rb') as f:
