@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import pandas as pd
-import numpy as np
-
-
 # directory = 'E:/Cleaning-todo/'
 
-directory = "C:/Users/PeterChaplin/Downloads/"
-file="dnstxt_records_full.txt"
+directory = "C:/Users/PeterChaplin/Downloads/domains/"
+data = "domains-detailed.csv"
 
 N = 200
-with open(directory + file, mode="r") as file1, open(
+with open(directory + data, mode="r") as file1, open(
     directory + "domtxt.csv", mode="a"
 ) as file2:
     for i in range(0, N):
