@@ -1,3 +1,6 @@
+
+
+
 import csv
 
 directory = "E:/rapid7/"
