@@ -2,12 +2,12 @@
 
 # directory = 'E:/Cleaning-todo/'
 
-directory = "C:/Users/PeterChaplin/Downloads/domains/"
-data = "domains-detailed.csv"
+directory = "C:/Users/PeterChaplin/Downloads/dnstxt-records-full/"
+data = "dnstxt-records-full.txt"
 
 N = 200
 with open(directory + data, mode="r") as file1, open(
-    directory + "domtxt.csv", mode="a"
+    directory + "domtxt.txt", mode="a"
 ) as file2:
     for i in range(0, N):
         a = file1.readline()
@@ -30,4 +30,3 @@ if __name__ == "__main__":
     freeze_support()
     ...
 """
-
